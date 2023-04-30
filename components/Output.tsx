@@ -2,6 +2,8 @@ import ReactMarkdown from 'react-markdown';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import ts from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
 import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
+import json from 'react-syntax-highlighter/dist/esm/languages/prism/json';
+import yaml from 'react-syntax-highlighter/dist/esm/languages/prism/yaml';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import type { PropsWithChildren } from 'react';
 
@@ -10,10 +12,14 @@ type Props = PropsWithChildren<{
   className?: string;
 }>;
 
+SyntaxHighlighter.registerLanguage('json', json);
+SyntaxHighlighter.registerLanguage('yaml', yaml);
 SyntaxHighlighter.registerLanguage('typescript', ts);
 SyntaxHighlighter.registerLanguage('tsx', tsx);
 
 const availableLanguages: Record<string, string> = {
+  json: 'json',
+  yaml: 'yaml',
   js: 'ts',
   ts: 'ts',
   javascript: 'ts',
