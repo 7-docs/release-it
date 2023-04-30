@@ -1,15 +1,15 @@
 export const embeddingModels = ['text-embedding-ada-002'];
 export const completionModels = ['gpt-3.5-turbo'];
 
-export const namespace = 'deno-manual';
+export const namespace = 'release-it';
 
-export const title = 'Deno Manual';
+export const title = 'Release It!';
 
 export const suggestions = [
-  'What is Deno?',
-  "Why can't my program access the network?",
-  'What is the architecture of Deno KV?',
-  'Where can I deploy Deno scripts?'
+  'How do I install release-it?',
+  'How can I do GitHub Releases?',
+  'What about conventional commits?',
+  'How can I release pre-releases?',
 ];
 
 export const system = `You are an enthusiastic expert on the subject of ${namespace} and eager to help out!
